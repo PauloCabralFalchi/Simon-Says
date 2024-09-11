@@ -16,11 +16,14 @@ $("body").on("touchstart", startGame)
 $(".grid-item").on("click touchstart", handleClick)
 
 function startGame() {
-    gameStatus = 1
-    $("body").css("background-color", "#011F3F")
-    simonSays.push(newSimonValue());
-    updateLevel();
-    lightUpButtons();
+    if (gameStatus === 0) {
+        gameStatus = 1
+        $("body").css("background-color", "#011F3F")
+        simonSays.push(newSimonValue());
+        updateLevel();
+        lightUpButtons();
+    }
+
 }
 
 function handleClick() {
