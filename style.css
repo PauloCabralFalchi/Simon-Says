@@ -1,0 +1,69 @@
+body {
+    background-color: #011F3F;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    margin-top: 9rem;
+    margin-right: 9rem;
+    margin-bottom: 9rem;
+    grid-template-columns: 3rem 3rem;
+    grid-template-rows: 3rem 3rem;
+}
+
+#level {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+.grid-item {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    border: solid 10px black;
+    border-radius: 25%;
+}
+
+.green {
+    background-color: #008000;
+    color: #008000;
+}
+
+.red {
+    background-color: #FF0000;
+    color: #FF0000;
+}
+
+.yellow {
+    background-color: #FFFF00;
+    color: #FFFF00;
+}
+
+.blue {
+    background-color: #0000FF;
+    color: #0000FF;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+
