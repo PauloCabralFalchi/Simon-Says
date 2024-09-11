@@ -11,11 +11,9 @@ $("body").keydown(function(event) {
     lightUpButtons();
 })
 
-$("body").on("tap", startGame)
+$("body").on("touchstart", startGame)
 
-
-$(".grid-item").on("click", handleClick)
-$(".grid-item").on("tap", handleClick)
+$(".grid-item").on("click touchstart", handleClick)
 
 function startGame() {
     gameStatus = 1
