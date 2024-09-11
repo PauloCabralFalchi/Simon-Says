@@ -3,16 +3,27 @@ var colors = ["green", "red", "yellow", "blue"];
 var playerInputs = [];
 var gameStatus = 0
 
-$("body").keydown(function(event){
+$("body").keydown(function(event) {
     gameStatus = 1
     $("body").css("background-color", "#011F3F")
     simonSays.push(newSimonValue());
     updateLevel();
     lightUpButtons();
-
 })
 
+$("body").on("tap", startGame)
+
+
 $(".grid-item").on("click", handleClick)
+$(".grid-item").on("tap", handleClick)
+
+function startGame() {
+    gameStatus = 1
+    $("body").css("background-color", "#011F3F")
+    simonSays.push(newSimonValue());
+    updateLevel();
+    lightUpButtons();
+}
 
 function handleClick() {
     
@@ -99,10 +110,11 @@ function makeSound(key) {
 }
 
 function restart() {
+    var lastLevel = simonSays.length
     makeSound("explosion")
-    $("body").css("background-color", "#360a0a")
+    $("body").css("background-color", "#360a0a");
+    $("h1").text("Game Over (Level " + lastLevel + "), press any key to restart");
     playerInputs = [];
     simonSays = [];
     gameStatus = 0;
-    $("h1").text("Game Over, press any key to restart");
 }
