@@ -104,5 +104,5 @@ function restart() {
     playerInputs = [];
     simonSays = [];
     gameStatus = 0;
-    $("h1").text("You Loose, press any key to start");
+    $("h1").text("Game Over, press any key to restart");
 }
